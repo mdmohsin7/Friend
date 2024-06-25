@@ -20,6 +20,7 @@ void main() async {
   ble.FlutterBluePlus.setLogLevel(ble.LogLevel.info, color: true);
   await initializeNotifications();
   await SharedPreferencesUtil.init();
+  Env.init();
   await MixpanelManager.init();
   await ObjectBoxUtil.init();
   if (Env.oneSignalAppId != null) {
